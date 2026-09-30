@@ -289,3 +289,8 @@ section[id]{scroll-margin-top:var(--header-offset)}
  .hero-inner{padding-top:320px}
  .hero-copy>.eyebrow,.hero-copy>h1,.hero-copy>.hero-description{position:static;top:auto}
 }
+
+/* Contraste suave atrás do bloco aprovado no celular. */
+@media(max-width:750px){
+ .hero-shade{background:linear-gradient(180deg,rgba(17,25,35,.2) 0%,rgba(17,25,35,.2) 23%,rgba(17,25,35,.78) 34%,rgba(17,25,35,.82) 52%,rgba(17,25,35,.7) 64%,rgba(17,25,35,.25) 82%,rgba(17,25,35,.15) 100%)}
+}
