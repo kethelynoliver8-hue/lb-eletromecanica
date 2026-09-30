@@ -284,9 +284,8 @@ section[id]{scroll-margin-top:var(--header-offset)}
  .menu-toggle:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
 }
 
-/* Apenas textos do banner mobile reposicionados na área indicada. */
+/* Bloco compacto na altura central indicada, sem deslocamentos individuais. */
 @media(max-width:750px){
- .hero-copy>.eyebrow{position:relative;top:-130px}
- .hero-copy>h1{position:relative;top:-112px}
- .hero-copy>.hero-description{position:relative;top:-60px}
+ .hero-inner{padding-top:320px}
+ .hero-copy>.eyebrow,.hero-copy>h1,.hero-copy>.hero-description{position:static;top:auto}
 }
