@@ -300,3 +300,15 @@ if (aboutHighlights && 'IntersectionObserver' in window && !matchMedia('(prefers
   }, {threshold: 0.2});
   highlightsObserver.observe(aboutHighlights);
 }
+
+// Menu do celular: abre por botão e fecha ao navegar ou pressionar Escape.
+const mobileMenuButton = document.querySelector('.menu-toggle');
+const mobileMenuHeader = document.querySelector('.site-header');
+function setMobileMenu(open) {
+  mobileMenuButton.setAttribute('aria-expanded', String(open));
+  mobileMenuButton.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+  mobileMenuHeader.classList.toggle('menu-open', open);
+}
+mobileMenuButton.addEventListener('click', () => setMobileMenu(mobileMenuButton.getAttribute('aria-expanded') !== 'true'));
+document.querySelectorAll('#main-menu a').forEach(link => link.addEventListener('click', () => setMobileMenu(false)));
+document.addEventListener('keydown', event => { if (event.key === 'Escape') setMobileMenu(false); });

@@ -103,3 +103,5 @@ Selo atualizado: inclinação suave até 24 graus para a esquerda e retorno, sem
 Reflexo atualizado: menor intensidade, limitado ao anel das inscrições, sem halo externo.
 
 Destaques entram da esquerda em sequência. Máscara do reflexo dimensionada pelo raio do selo (closest-side), excluindo o check central.
+
+Ajustes mobile (até 750 px): menu hambúrguer acessível, textos do banner abaixo da concertina e direitos reservados em linha única. Desktop preservado.

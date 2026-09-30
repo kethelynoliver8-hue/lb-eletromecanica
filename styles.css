@@ -260,3 +260,26 @@ section[id]{scroll-margin-top:var(--header-offset)}
 
 /* As inscrições ficam no anel externo: o centro com check permanece sem reflexo. */
 .seal-face::after{mask:radial-gradient(circle closest-side at 50% 50%,transparent 0 58%,#000 62% 80%,transparent 84%);-webkit-mask:radial-gradient(circle closest-side at 50% 50%,transparent 0 58%,#000 62% 80%,transparent 84%)}
+
+/* Ajustes exclusivos de celular: concertina livre, texto abaixo e navegação recolhida. */
+.menu-toggle{display:none}
+@media(max-width:750px){
+ .header-inner{flex-wrap:nowrap;padding:16px 20px;gap:10px}
+ .site-header .brand{width:clamp(135px,38vw,170px);flex-shrink:0}
+ .header-quote{margin-left:auto;min-height:36px;padding:8px 9px;font-size:10px}
+ .menu-toggle{display:flex;flex-direction:column;justify-content:center;gap:5px;width:34px;height:38px;padding:7px;background:transparent;border:0;cursor:pointer;flex-shrink:0}
+ .menu-toggle span{display:block;height:2px;width:20px;background:var(--text);transition:transform .2s,opacity .2s}
+ .menu-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+ .menu-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+ .menu-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+ .site-header .nav{display:none;position:absolute;top:100%;left:0;right:0;padding:20px;background:#111923fa;box-shadow:0 12px 20px #0004;font-size:14px}
+ .site-header.menu-open .nav{display:flex;flex-direction:column;align-items:flex-start;gap:18px}
+ .hero{height:auto;min-height:920px}
+ .hero-inner{padding:420px 20px 210px;align-items:flex-start}
+ .hero-copy{width:100%}
+ .hero-shade{background:linear-gradient(180deg,#11192335 0%,#11192315 32%,#111923b8 47%,#111923c9 68%,#11192340 90%)}
+ .hero-benefits{position:static;margin-top:22px;font-size:clamp(10px,2.9vw,13px)}
+ .hero-benefits li+li::before{height:11px;margin:0 8px}
+ .footer-copyright{white-space:nowrap;font-size:clamp(9px,2.55vw,11px);padding-right:0;letter-spacing:-.1px}
+ .menu-toggle:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
+}
