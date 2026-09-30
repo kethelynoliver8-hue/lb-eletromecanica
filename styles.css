@@ -283,3 +283,10 @@ section[id]{scroll-margin-top:var(--header-offset)}
  .footer-copyright{white-space:nowrap;font-size:clamp(9px,2.55vw,11px);padding-right:0;letter-spacing:-.1px}
  .menu-toggle:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
 }
+
+/* Apenas textos do banner mobile reposicionados na área indicada. */
+@media(max-width:750px){
+ .hero-copy>.eyebrow{position:relative;top:-130px}
+ .hero-copy>h1{position:relative;top:-112px}
+ .hero-copy>.hero-description{position:relative;top:-60px}
+}
