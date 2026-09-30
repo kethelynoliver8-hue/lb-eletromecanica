@@ -294,3 +294,14 @@ section[id]{scroll-margin-top:var(--header-offset)}
 @media(max-width:750px){
  .hero-shade{background:linear-gradient(180deg,rgba(17,25,35,.2) 0%,rgba(17,25,35,.2) 23%,rgba(17,25,35,.78) 34%,rgba(17,25,35,.82) 52%,rgba(17,25,35,.7) 64%,rgba(17,25,35,.25) 82%,rgba(17,25,35,.15) 100%)}
 }
+
+/* Desktop: a área transparente da transição não intercepta os botões do banner. */
+@media(min-width:751px){.about{pointer-events:none}.about-inner{pointer-events:auto}}
+
+/* Celular: rodapé no fluxo normal, com altura livre e rolagem vertical. */
+@media(max-width:750px){
+ html,body{height:auto;max-height:none;overflow-y:visible}
+ .site-footer{position:relative;height:auto;max-height:none;overflow:visible;touch-action:pan-y;padding-bottom:calc(30px + env(safe-area-inset-bottom,0px))}
+ .footer-inner{height:auto;max-height:none;overflow:visible}
+ .footer-nav,.footer-contact,.footer-copyright{visibility:visible;opacity:1}
+}
